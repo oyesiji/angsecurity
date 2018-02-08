@@ -12,6 +12,7 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { routing } from './app.routing';
 import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { RegisterComponent } from './register/register.component';
     RegisterComponent
   ],
   imports: [
-    BrowserModule, HttpModule, routing
+    BrowserModule, HttpModule, routing, FormsModule
   ],
   providers: [PhotoService, RegisterService],
   bootstrap: [AppComponent]
