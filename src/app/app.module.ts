@@ -23,6 +23,7 @@ import { MyAlbumComponent } from './my-album/my-album.component';
 import { AddPhotoComponent } from './add-photo/add-photo.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
 import { ImageCommentsComponent } from './image-comments/image-comments.component';
+import { PhotoRowComponent } from './photo-row/photo-row.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ImageCommentsComponent } from './image-comments/image-comments.componen
     MyAlbumComponent,
     AddPhotoComponent,
     ImageDetailComponent,
-    ImageCommentsComponent
+    ImageCommentsComponent,
+    PhotoRowComponent
   ],
   imports: [
     BrowserModule, HttpModule, routing, FormsModule
