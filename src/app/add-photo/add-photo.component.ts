@@ -4,6 +4,7 @@ import {UploadPhotoService} from '../services/upload-photo.service';
 import {AddPhotoService} from '../services/add-photo.service';
 import {UserService} from '../services/user.service';
 import {User} from '../models/user';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,7 @@ newPhoto: Photo = new Photo();
   photoAdded = false;
   user: User;
 
-  constructor (private uploadPhotoService: UploadPhotoService, private addPhotoService: AddPhotoService, private userService: UserService) {
+  constructor (private uploadPhotoService: UploadPhotoService, private addPhotoService: AddPhotoService, private userService: UserService, private router: Router) {
     console.log('### Constructor image invoked ');
     console.log('### Constructor image invoked ');
     console.log('### Constructor image invoked ');
@@ -46,6 +47,9 @@ newPhoto: Photo = new Photo();
     console.log('### add image invoked ');
     console.log('### add image invoked ');
     console.log('### add image invoked ');
+    if (!localStorage.getItem('currentUserName')) {
+        this.router.navigate(['/login']);
+    }
   }
 
 }

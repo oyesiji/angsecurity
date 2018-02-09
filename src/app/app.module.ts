@@ -11,6 +11,7 @@ import {AddPhotoService} from './services/add-photo.service';
 import {UserService} from './services/user.service';
 import {LoginService} from './services/login.service';
 import {PhotoService} from './services/photo.service';
+import {CommentService} from './services/comment.service';
 import {RegisterService} from './services/register.service';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -20,6 +21,8 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { MyAlbumComponent } from './my-album/my-album.component';
 import { AddPhotoComponent } from './add-photo/add-photo.component';
+import { ImageDetailComponent } from './image-detail/image-detail.component';
+import { ImageCommentsComponent } from './image-comments/image-comments.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +34,14 @@ import { AddPhotoComponent } from './add-photo/add-photo.component';
     RegisterComponent,
     LoginComponent,
     MyAlbumComponent,
-    AddPhotoComponent
+    AddPhotoComponent,
+    ImageDetailComponent,
+    ImageCommentsComponent
   ],
   imports: [
     BrowserModule, HttpModule, routing, FormsModule
   ],
-  providers: [PhotoService, RegisterService, LoginService, UserService, AddPhotoService, UploadPhotoService],
+  providers: [PhotoService, RegisterService, LoginService, UserService, AddPhotoService, UploadPhotoService, CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
