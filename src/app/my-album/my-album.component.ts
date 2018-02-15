@@ -13,7 +13,7 @@ import {Router} from '@angular/router';
 })
 export class MyAlbumComponent implements OnInit {
 
-  private photos: Photo[];
+  public photos: Photo[];
   private user;
   private selectedPhoto: Photo;
 

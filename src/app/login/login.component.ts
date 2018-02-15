@@ -10,14 +10,14 @@ import {LoginService} from '../services/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  private model = {'username': '', 'password': ''};
-  private currentUserName;
+  public model = {'username': '', 'password': ''};
+  public currentUserName;
 
 
     ngOnInit(): void {
 
   }
-  constructor (private loginService: LoginService) {
+  constructor (public loginService: LoginService) {
     this.currentUserName = localStorage.getItem('currentUserName');
   }
 

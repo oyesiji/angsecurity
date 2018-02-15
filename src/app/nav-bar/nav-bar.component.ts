@@ -14,7 +14,7 @@ export class NavBarComponent implements OnInit {
 
 
 
-    constructor (private loginService: LoginService) {
+    constructor (public loginService: LoginService) {
     this.myLocalStorage = localStorage;
   }
 

@@ -3,7 +3,7 @@ import {Http, Headers} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 
 @Injectable()
-export class LoginService {
+export  class LoginService {
   token: string;
 
   constructor (private http: Http) {}
