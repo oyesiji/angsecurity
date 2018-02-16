@@ -10,7 +10,7 @@ export class UploadPhotoService {
     }
 
     upload() {
-        this.makeFileRequest('http://localhost:8080/rest/photo/upload', [], this.filesToUpload).then((result) => {
+        this.makeFileRequest('/rest/photo/upload', [], this.filesToUpload).then((result) => {
             console.log(result);
         }, (error) => {
             console.error(error);
